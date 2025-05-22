@@ -1,0 +1,82 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Thu May 22 10:43:31 2025
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   inventory.ctl
+Data File:      ML-Dataset.csv
+  Bad File:     ML-Dataset.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table INVENTORY_FULL, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+REGIONNAME                          FIRST     *   ,  O(") CHARACTER            
+COUNTRYNAME                          NEXT     *   ,  O(") CHARACTER            
+STATE                                NEXT     *   ,  O(") CHARACTER            
+CITY                                 NEXT     *   ,  O(") CHARACTER            
+POSTALCODE                           NEXT     *   ,  O(") CHARACTER            
+WAREHOUSEADDRESS                     NEXT     *   ,  O(") CHARACTER            
+WAREHOUSENAME                        NEXT     *   ,  O(") CHARACTER            
+EMPLOYEENAME                         NEXT     *   ,  O(") CHARACTER            
+EMPLOYEEEMAIL                        NEXT     *   ,  O(") CHARACTER            
+EMPLOYEEPHONE                        NEXT     *   ,  O(") CHARACTER            
+EMPLOYEEHIREDATE                     NEXT     *   ,  O(") DATE YYYY-MM-DD      
+EMPLOYEEJOBTITLE                     NEXT     *   ,  O(") CHARACTER            
+CATEGORYNAME                         NEXT     *   ,  O(") CHARACTER            
+PRODUCTNAME                          NEXT     *   ,  O(") CHARACTER            
+PRODUCTDESCRIPTION                   NEXT     *   ,  O(") CHARACTER            
+PRODUCTSTANDARDCOST                  NEXT     *   ,  O(") CHARACTER            
+PROFIT                               NEXT     *   ,  O(") CHARACTER            
+PRODUCTLISTPRICE                     NEXT     *   ,  O(") CHARACTER            
+CUSTOMERNAME                         NEXT     *   ,  O(") CHARACTER            
+CUSTOMERADDRESS                      NEXT     *   ,  O(") CHARACTER            
+CUSTOMERCREDITLIMIT                  NEXT     *   ,  O(") CHARACTER            
+CUSTOMEREMAIL                        NEXT     *   ,  O(") CHARACTER            
+CUSTOMERPHONE                        NEXT     *   ,  O(") CHARACTER            
+STATUS                               NEXT     *   ,  O(") CHARACTER            
+ORDERDATE                            NEXT     *   ,  O(") DATE YYYY-MM-DD      
+ORDERITEMQUANTITY                    NEXT     *   ,  O(") CHARACTER            
+PERUNITPRICE                         NEXT     *   ,  O(") CHARACTER            
+TOTALITEMQUANTITY                    NEXT     *   ,  O(") CHARACTER            
+
+value used for ROWS parameter changed from 250 to 145
+Record 1: Rejected - Error on table INVENTORY_FULL, column EMPLOYEEHIREDATE.
+ORA-01841: (full) year must be between -4713 and +9999, and not be 0
+
+Record 401: Rejected - Error on table INVENTORY_FULL, column EMPLOYEEHIREDATE.
+ORA-01858: a non-numeric character was found where a numeric was expected
+
+
+Table INVENTORY_FULL:
+  399 Rows successfully loaded.
+  2 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                1047480 bytes(145 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:           401
+Total logical records rejected:         2
+Total logical records discarded:        0
+
+Run began on Thu May 22 10:43:31 2025
+Run ended on Thu May 22 10:43:32 2025
+
+Elapsed time was:     00:00:01.29
+CPU time was:         00:00:00.09
