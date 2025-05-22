@@ -1,0 +1,3 @@
+CREATE USER app IDENTIFIED BY app
+DEFAULT TABLESPACE inventory_ts
+QUOTA UNLIMITED ON inventory_ts;
